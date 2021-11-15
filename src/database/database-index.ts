@@ -47,7 +47,6 @@ function saveToDB(itemData: any, modelType: TModelType): Promise<IModel | string
   const Model: TGenericModel = getModel(modelType);
   const item: IModel = new Model(itemData);
 
-  // @ts-ignore
   return item.save();
 }
 
